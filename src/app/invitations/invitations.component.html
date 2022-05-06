@@ -1,0 +1,34 @@
+
+<th>invitation</th>
+
+<div  class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class ="table table-striped">
+<tr> <th>Id</th> <th>employ</th> <th>Metier_employ</th> <th>destination</th> <th>Date</th>                                      </tr>
+      <tbody *ngFor ="let invitation of invitations">
+        <tr>
+
+          <td>{{invitation?.invitationId}}</td>
+          <td>{{invitation?.employe}}</td>
+          <td>{{invitation?.metier_employe}}</td>
+          <td>{{invitation?.recepteur}}</td>
+          <td>{{invitation?.date|date:'dd/MM/yyyy'}}</td>
+
+          <td><a class="btn btn-danger" (click)="supprimerInvitation(invitation)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/updateInvitation',invitation.invitationId]">Modifier</a></td>
+        </tr>
+
+
+        </tbody>
+
+      </table>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>

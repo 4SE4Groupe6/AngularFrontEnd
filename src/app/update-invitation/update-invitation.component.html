@@ -1,0 +1,41 @@
+<p>add-invitation works!</p>
+<div class="container">
+  <div>
+    <h2>Modifier une invitations :</h2>
+  </div>
+
+  <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >ID Invitation</label>
+      <input  type="text" [(ngModel)]="currentInvitation.invitationId" name="invitationId" class="form-control">
+    </div>
+
+
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Date </label>
+      <input type="date"[(ngModel)]= "currentInvitation.date" name="date" class="form-control">
+    </div>
+
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >employe</label>
+      <input type="text" [(ngModel)]= "currentInvitation.employe" name="employe" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Metier employe</label>
+      <input type="text" [(ngModel)]= "currentInvitation.metier_employe" name="metier_employe" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Recepteur</label>
+      <input type="text" [(ngModel)]= "currentInvitation.recepteur" name="destination" class="form-control">
+    </div>
+
+    <div class="mt-2">
+      <button type="submit" (click)="updateInvitation()" class="btn btn-success">Modifier</button>
+
+
+    </div>
+  </form>
+</div>
